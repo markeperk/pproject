@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html ng-app="rtfmApp">
+<html ng-app="excCrit">
 <head>
 	<title></title>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="styles/style.css" />
 </head>
 <body ng-controller="mainCtrl">
-
+	<div class="navbar">
+		<div class="logo"><a href="/#/login"><img src="images/assess.png" /></a>
+		</div>
+	</div>
 	<div class="container" ng-view></div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24,7 +38,8 @@
 	<script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
 	<script src="js/app.js"></script>
-	<script src="threads/app.js"></script>
+	<script src="directives/newCriteria.js"></script>
+	<script src="directives/sidebar.js"></script>
 	<script src="service/fbService.js"></script>
 	<script src="service/envService.js"></script>
 	<script src="service/threadService.js"></script>

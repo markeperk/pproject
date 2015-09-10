@@ -1,0 +1,6 @@
+<div class="sidebar">
+    <ul>
+    	<li ng-class="{elemList: thread.hierarchy === 'Element', pillarList: thread.hierarchy === 'Pillar'}" ng-repeat="thread in threads | sidebarFilter"> {{thread.title}}
+    	</li>
+    </ul>
+</div>

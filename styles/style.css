@@ -1,0 +1,417 @@
+html, body {
+	margin: 0;
+	width: 100%;
+	/*height: 100%;*/
+	background: rgba(60, 60, 60, .13);
+}
+.navbar {
+	width: 100%;
+	height: 75px;
+	background: #1a4857;
+	/*float: left;*/
+}
+.container {
+	display: inline;	
+	margin: 0;
+}
+.logo img{
+	/*float: left;*/
+	height: 60px;
+	margin: 5px 0px 0px 20px;
+}
+.log {
+	width: 100%;
+	height: 100%;
+}
+.login {
+	width: 360px;
+	height: 140px;
+	margin: 100px auto;
+	background: rgba(51, 115, 199, .2);
+	border: 1px solid rgba(51, 115, 199, .2);
+	border-radius: 10px;
+}
+.login input {
+	border-radius: 5px;
+	height: 2.5em;
+	width: 250px;
+	margin: 25px 0 0 20px;
+	border: none;
+	font-family: tahoma;
+	padding-left: 10px;
+}
+.login button {
+	background: rgba(250, 245, 193, 1);
+	border: 1px solid rgba(250, 245, 193, .2);
+	border-radius: 5px;
+	height: 2.5em;
+	cursor: pointer;
+	margin-left: 5px;
+}
+.nav {
+	float: left;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 1px;
+	border-bottom: 1px solid rgba(60, 60, 60, .1);
+	padding: 0;
+	box-shadow: 0 0 2px rgba(60, 60, 60, .1);
+}
+.nav p{
+	font-family: tahoma;
+	font-size: 90%;
+	text-transform: uppercase;
+	color: rgba(60, 60, 60, .5);
+	margin: 13px 0 0px 18px;
+	width: 200px;
+	display: inline-block;
+}
+.nav input {
+	float: right;
+	vertical-align: top;
+	margin: 8px 25px 0 0;
+	padding-left: 10px;
+	border-radius: 5px;
+	height: 2em;
+	width: 170px;
+	border: none;
+	font-family: tahoma;
+}
+
+.hier {
+	vertical-align: top;
+	margin: 8px 10px 5px 0;
+	border-radius: 5px;
+	height: 1.75em;
+	border: none;
+	font-family: verdana;
+	color: rgba(60, 60, 60, .5);
+}
+
+.idcode {
+	vertical-align: top;
+	margin: 7px 10px 5px 0;
+	border-radius: 5px;
+	height: 1.65em;
+	width: 100px;
+	border: none;
+	font-family: verdana;
+	padding-left: 10px;
+	color: rgba(60, 60, 60, .5);
+}
+.score {
+	float: right;
+	vertical-align: top;
+	margin: 12px 6% 5px 10px;
+	color: rgba(60, 60, 60, .5);
+	font-family: verdana;
+	font-size: 70%;
+}
+.score input{
+	border-color: rgb(221, 221, 221);
+	box-shadow: none;
+	margin: 0;
+}
+.assessHead {
+	float: right;
+	width: 79%;
+	padding: 5px 5px 5px 0;
+	margin-bottom: 10px;
+}
+.criteria {
+	border-radius: 5px;
+	margin: 0;
+	width: 93%;
+	border: none;
+	font-family: tahoma;
+	padding: 10px 0 0 10px;
+	letter-spacing: .05em;
+}
+.assessHead button {
+	background: rgba(60, 60, 60, .08);
+	border: .5px solid rgba(60, 60, 60, .3);
+	color: gray;
+	border-radius: 3px;
+	vertical-align: top;
+	height: 3em;
+	cursor: pointer;
+	margin-left: 3px;
+	margin-top: 1.5px;
+}
+.fullAssessList {
+	float: right;
+	width: 77%;
+	padding: 0;
+	margin: 0 22px 0 0;
+}
+#assessList {
+	float: right;
+	width: 100%;
+	padding: 1px;
+	margin-left: 15px;
+/*	margin-bottom: 3px;*/
+}
+.critList {
+	display: flex;
+	font-family: tahoma;
+	width: 100%;
+/*	margin-bottom: 5px;*/
+}
+.critList p {
+	color: rgba(60, 60, 60, .6);
+	font-size: 75%;
+	/*border-bottom: 1px solid rgba(60, 60, 60, .1);*/
+	/*padding-bottom: 5px;*/
+	margin: 5px 0 0 0;
+}
+.designation {
+	flex-direction: row-reverse;
+	width: 12%;
+	font-size: 60%;
+	color: rgba(60, 60, 60, .5);
+}
+.scoring {
+	flex-direction: row-reverse;
+	width: 5%;
+}
+.code {
+	flex-direction: row-reverse;
+	width: 6%;
+	text-align: left;
+}
+.hierarchy {
+	font-weight: 800;
+}
+.critSs {
+	flex-direction: row-reverse;
+	width: 76%;
+	font-style: italic;
+	padding-right: 15px;
+}
+.critSs p {
+	padding-left: 40px;
+}
+.critSpec {
+	flex-direction: row-reverse;
+	width: 76%;
+	font-style: italic;
+	padding-right: 15px;
+}
+.critSpec p {
+	padding-left: 30px;
+}
+.critComp {
+	flex-direction: row-reverse;
+	width: 76%;
+	padding-right: 15px;
+}
+.critComp p {
+	padding-left: 20px;
+}
+.critElem {
+	flex-direction: row-reverse;
+	width: 76%;
+	padding-right: 15px;
+}
+.critElem p {
+	padding-left: 10px;
+}
+.critPillar {
+	flex-direction: row-reverse;
+	width: 76%;
+	padding-right: 10px;
+	font-weight: 600;
+	
+}
+.critPillar p {
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+/*Editing Criteria on DoubleClick*/
+
+.editing {
+	border-bottom: none;
+	padding: 0;
+}
+.editing .editClassification {
+	float: left;
+	width: 11%;
+	padding-left: 2px;
+	margin-left: -3px;
+}
+.editing .editScore {
+	float: left;
+	width: 2%;
+	margin-left: 8px;
+}
+.editing .editCode {
+	float: left;
+	width: 6%;
+	padding-left: 2px;
+	margin-left: 5px;
+}
+.editing .editStatement {
+	float: left;
+	width: 72%;
+	padding-left: 2px;
+	margin-left: 5px;
+}
+.edit {
+	width: 100%;
+	color: rgba(60, 60, 60, .8);
+	border-radius: 4px;
+	border: 1px solid rgba(60, 60, 60, .1);
+}
+.editing .statement {
+	display: none;
+}
+.editMore {
+	float: right;
+	/*margin-right: 10px;*/
+	width: 2%;
+	cursor: pointer;
+}
+.editMore .down {
+	margin: 4px 0px 0 1px;
+}
+.editMore .delete {
+	margin: 7px 5px 0 16px;
+}
+.editMore .editButton {
+	background: rgba(60, 60, 60, .08);
+	border: .5px solid rgba(60, 60, 60, .3);
+	color: gray;
+	border-radius: 3px;
+	height: 1.7em;
+	cursor: pointer;
+	font-size: 10px;
+	margin: 22px 10px 0 20px;
+}
+
+/* for sidebar.html*/
+
+.sidebar {
+	float: left;
+	width: 18%;
+	height: 1000px;
+	display: inline-block;
+	background: rgba(255, 255, 255, .4);
+	padding: 80px 10px 0 0;
+}
+.pillarList {
+	list-style-type: none;
+	margin: 10px 5px 10px -20px;
+	color: rgba(60, 60, 60, .7);
+	font-family: tahoma;
+	font-size: 75%;
+	font-weight: 800;
+}
+.elemList {
+	padding: 0;
+	color: rgba(60, 60, 60, .6);
+	margin: 5px 0;
+	font-family: tahoma;
+	font-size: 70%;
+}
+
+/*Far right Side Buttons*/
+
+.more {
+	flex-direction: row-reverse;
+	width: 2%;
+	cursor: pointer;
+}
+.more .down {
+	margin-top: 4px;
+}
+.more .delete {
+	margin: 7px 0 0 15px;
+}
+
+
+/*Info Bar*/
+
+.infobar {
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+	max-height: 30px;
+	transition: .2s;
+	margin-bottom: 3px;
+	padding: 0;
+}
+.infobar.hidden {
+	max-height: 0;
+}
+.rightSpace {
+	flex-direction: row-reverse;
+	width: 3%;
+	height: 30px;
+	
+}
+.infoSpace {
+	display: flex;
+	flex-direction: row-reverse;
+	height: 0px;
+	width: 100%;
+	box-shadow: 0 -3px 4px -2px rgba(0, 0, 0, 0.15);
+	border-top: 30px solid rgba(255, 255, 255, .6);
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-radius: 0 0 18px 18px;
+}
+.innerSpace {
+	position: relative;
+	width: 100%;
+	top: -31px;
+	height: 30px;
+	background: none;
+}
+.infoCreated {
+	float: right;
+	width: 20%;
+	height: 24px;
+}
+.infoCreated p {
+	color: rgba(60, 60, 60, .4);
+	font-size: 60%;
+	font-family: Tahoma;
+	text-align: left;
+	margin: 0;
+	padding: 3px;
+}
+.infoComment {
+	float: right;
+	width: 78%;
+	height: 30px;
+}
+.infoComment input {
+	color: rgba(60, 60, 60, .4);
+	font-size: 70%;
+	font-family: Tahoma;
+	width: 95%;
+	margin-top: 7px;
+	padding-left: 5px;
+	border-radius: 6px;
+	height: 1.5em;
+	border: none;
+}
+
+
+.author {
+	float: right;
+	width: 80%;
+	height: 10px;
+}
+.author p{
+	font-family: tahoma;
+	color: rgba(60, 60, 60, .4);
+	font-size: 60%;
+	text-transform: uppercase;
+	font-style: italic;
+	margin: 2px 20% 0 0;
+	float: right;
+	font-weight: 100;
+	padding: 0;
+}

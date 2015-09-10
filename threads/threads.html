@@ -1,18 +1,41 @@
-<div>
-    <p>Threads</p>
+<link rel="stylesheet" href="styles/style.css" />
 
-    <form name="newThreadForm">
-        <input type="text" ng-model="newThreadTitle" placeholder="New thread title..." required/>
-        <button ng-disabled="newThreadForm.$invalid" ng-click="createThread(username, newThreadTitle)">Add Thread</button>
-    </form>
-
-    <ul>
-        <li ng-repeat="thread in threads">
-            <a href="/#/threads/{{thread.$id}}">
-                <span>{{ thread.title }}</span>
-                <span>(by {{ thread.username }})</span>
-            </a>
-        </li>
-    </ul>
+<div class="nav">
+    <p>Assessment Builder</p>
+    <input type="text" class="search" ng-model="filterAll" placeholder="Search" />
 </div>
+
+<sidebar></sidebar>
+
+<div class="assessHead">
+     <input type="text" class="idcode" ng-model="newCode" placeholder="ID Code" />
+    <select name="hierarchy" class="hier" ng-model="newHier">
+        <option value="" disabled selected>Select Hierarchy</option>
+        <option value="Pillar">Pillar</option>
+        <option value="Element">Element</option>
+        <option value="Component">Component</option>
+        <option value="Specification">Specification</option>
+        <option value="S-Specification">Sub-Specification</option>
+    </select>
+    <select name="designation" class="hier" ng-model="newDesig">
+       <option value="" disabled selected>Select Designation</option>
+        <option value="Work process">Work Process</option>
+        <option value="Capability">Measure</option>
+        <option value="Measure">Capability</option>
+        <option value="">None</option>
+    </select>
+    <form class="score">Add Scoring
+        <input type="checkbox" name="score">
+    </form>
+    <form name="criteriaBuilder">
+        <textarea class="criteria" ng-model="newCriteria" placeholder="Enter Assessment Statement"/></textarea>
+        <button ng-disabled="newThreadForm.$invalid" ng-click="createThread(username, newCriteria, newHier, newCode, newDesig, scoreOn)">Add</button>
+    </form>
+</div>
+
+<new-criteria></new-criteria>
+
+
+
+
 

@@ -1,4 +1,4 @@
-var app = angular.module('rtfmApp');
+var app = angular.module('excCrit');
 
 app.controller('logCtrl', function($scope, EnvironmentService, $location) {
 	$scope.env = EnvironmentService.getEnv();

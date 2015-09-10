@@ -1,4 +1,4 @@
-var app = angular.module('rtfmApp');
+var app = angular.module('excCrit');
 
 
  app.service('ThreadService', function ThreadService(EnvironmentService, $firebase) {
@@ -6,15 +6,15 @@ var app = angular.module('rtfmApp');
 
     return {
       getThreads: function () {
-        return $firebase(new Firebase('https://dazzling-fire-2305.firebaseio.com/rtfmDemo/threads'));
+        return $firebase(new Firebase('https://pproject.firebaseio.com/threads'));
       },
 
       getThread: function (threadId) {
-        return $firebase(new Firebase('https://dazzling-fire-2305.firebaseio.com/rtfmDemo/threads/' + threadId));
+        return $firebase(new Firebase('https://pproject.firebaseio.com/threads/' + threadId));
       },
     
       getComments: function (threadId) {
-        return $firebase(new Firebase('https://dazzling-fire-2305.firebaseio.com/rtfmDemo/threads/' + threadId + '/comments'));
+        return $firebase(new Firebase('https://pproject.firebaseio.com/threads/' + threadId + '/comments'));
       }
     }
   });

@@ -1,0 +1,96 @@
+
+<div class="fullAssessList" ng-repeat="thread in threads | filter: filterAll">
+	<div id="assessList" ng-class="{editing: thread == editedThread}">
+
+<!-- New Criteria   -->
+
+        <div class="critList" ng-if="thread !== editedThread" ng-dblclick="editThread(thread)">
+            <div class="designation">
+            	<span class="hierarchy">{{thread.hierarchy}}</span><br />
+                <span class="desig">{{thread.designation}}</span>
+            </div>
+            <div class="scoring">
+                <p>{{}}</p>
+            </div>
+            <div class="code">
+                <p>{{thread.code}}</p>
+            </div>
+            <div ng-class="{
+            	critSs: thread.hierarchy === 'S-Specification',
+            	critSpec: thread.hierarchy === 'Specification',
+            	critComp: thread.hierarchy === 'Component',
+            	critElem: thread.hierarchy === 'Element',
+            	critPillar: thread.hierarchy === 'Pillar'}" ng-dblclick="editThread(thread)">
+                <p>{{thread.title}}</p>
+            </div>
+            <div class="more">
+	             <img class="down" src="/images/info.png" ng-click="showInfo(thread)">
+	        </div>
+	        <div class="more">
+	            <img class="delete" ng-click="deleteThread(thread)" src="/images/delete.png">
+        	</div>
+        </div>
+
+<!-- Editing Criteria -->
+	
+        <form class="editClassification" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread" ng-submit="doneEditing(thread)">
+
+            <input class="edit" ng-model="thread.hierarchy"><br />
+            <input class="edit" ng-model="thread.designation">
+            <input type="submit" style="position: absolute; left: -99999px; width: 1px; height: 1px;"/>
+        </form>
+
+         <form class="editScore" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread">
+  			<input type="checkbox" name="scoring" value="{{thread.scoring}}">
+  		</form>
+
+        <form class="editCode" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread" ng-submit="doneEditing(thread)">      
+       		<input class="edit" ng-model="thread.code">
+        </form>
+
+        <form class="editStatement" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread">  
+    		<textarea class="edit" ng-model="thread.title" /></textarea>    		 
+        </form>
+
+	 	<div class="editMore" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread">
+            <img class="delete" ng-click="deleteThread(thread)" src="/images/delete.png">
+        </div>
+
+        <div class="editMore" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread">
+            <img class="down" src="/images/info.png" ng-click="showInfo(thread)">
+    	</div>
+    	<div class="editMore" ng-if="thread == editedThread" thread-blur="doneEditing(thread)" thread-focus="thread == editedThread">
+            <button class="editButton" ng-click="doneEditing(thread)"> Save </button>
+    	</div>
+    </div>  
+
+<!-- Info bar 	 -->	
+
+	<div class="infobar" ng-class="{'hidden': !showInfo[thread.$id]}">
+		<div class="infoSpace">
+			<div class="innerSpace">
+				<div class="infoCreated">
+					<p>Created by: {{thread.username}}<br />
+					Time Stamp</p>
+				</div>
+				<div class="infoComment">
+					<form class="threadComment" ng-submit="createComment(newCommentText)">
+						<input type="text" placeholder="Enter Comment" ng-model="newCommentText">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="rightSpace"></div>
+	</div>
+</div>
+
+
+        
+<!--     
+
+
+
+href to comment page
+<a href="/#/threads/{{thread.$id}}"><img src="/images/downarrow.png"></a> -->
+
+

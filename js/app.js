@@ -1,4 +1,4 @@
-var app = angular.module('rtfmApp', ['firebase', 'ngRoute']);
+var app = angular.module('excCrit', ['firebase', 'ngRoute']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -27,18 +27,6 @@ app.config(function($routeProvider){
 			    }
 			}
 		})		
-		// .when('/thread', {
-		// 	  templateUrl: 'threads/thread.html',
-		// 	  controller: 'ThreadCtrl',
-		// 	  resolve: {
-		// 	    threadRef: function (ThreadService, $route) {
-		// 	      return ThreadService.getThread($route.current.params.threadId);
-		// 	    },
-		// 	    commentsRef: function (ThreadService, $route) {
-		// 	      return ThreadService.getComments($route.current.params.threadId);
-		// 	    }
-		// 	}
-		// })
 		.otherwise('/login')
 });
 
